@@ -1,0 +1,6 @@
+<div *ngFor="let test of bookList">{{test.id}} {{test.title}}</div>
+
+<div class="title">Books with description</div>
+@for (book of booklistWithDescription | async; track book.description){
+  <div>{{book.title}} {{book.description}}</div>
+}
