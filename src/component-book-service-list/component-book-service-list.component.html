@@ -1,1 +1,6 @@
-<p>component-book-service-list works!</p>
+<div *ngFor="let test of bookList">{{test.id}} {{test.title}}</div>
+
+<div>Books with description</div>
+@for (book of booklistWithDescription | async; track book.description){
+  <div>{{book.title}} {{book.description}}</div>
+}
